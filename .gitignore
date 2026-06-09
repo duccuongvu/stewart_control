@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.py[cod]
+MUJOCO_LOG.TXT
+outputs/*.mp4

@@ -1,0 +1,5 @@
+numpy
+scipy
+mujoco>=3.0
+imageio
+imageio-ffmpeg
