@@ -21,10 +21,11 @@
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
     <camera name="track" pos="1.8 -1.8 2.4" mode="targetbody" target="upper"/>
 
-    <!-- Elastic ball dropped onto the tray; the controller keeps it centred while
-         it bounces. solref dampratio 0.15 gives a lively but stable rebound;
-         lower values inject energy on tilted contacts and the ball flies off. -->
-    <body name="ball" pos="0.05 0.04 2.1">
+    <!-- Elastic ball dropped onto the tray. The demo pumps a vertical platform
+         reference to sustain the bounce while keeping the ball centred. solref
+         dampratio 0.15 gives a lively but stable rebound; lower values inject
+         energy on tilted contacts and the ball flies off. -->
+    <body name="ball" pos="0.05 0.04 1.6">
       <freejoint name="ball_joint"/>
       <geom name="ball" type="sphere" size="0.03" rgba="0.95 0.55 0.1 1" mass="0.05"
             priority="1" contype="1" conaffinity="1"
