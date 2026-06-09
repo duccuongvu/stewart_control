@@ -31,6 +31,7 @@ while travelling to the same targets, sustained by a pumped vertical reference.
     </tr>
   </table>
 </p>
+
 ## Install
 
 The MuJoCo platform model is a git **submodule** (`model/stewart_platform_mujoco`,
