@@ -2,5 +2,4 @@
 __pycache__/
 *.py[cod]
 MUJOCO_LOG.TXT
-outputs/*.mp4
 CLAUDE.md

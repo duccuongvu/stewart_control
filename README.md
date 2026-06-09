@@ -9,6 +9,21 @@ position error into a tray tilt.
   <img src="model/stewart_platform.png" width="420">
 </p>
 
+## Demos
+
+| Ball balancing | Ball bouncing |
+| --- | --- |
+| ▶ [outputs/balance.mp4](outputs/balance.mp4) | ▶ [outputs/bounce.mp4](outputs/bounce.mp4) |
+
+*Balancing*: the ball rolls to a square of targets. *Bouncing*: the ball bounces
+while travelling to the same targets, sustained by a pumped vertical reference.
+
+<!-- These tags play in IDEs / local viewers; GitHub shows the links above. -->
+<table>
+  <tr><td><video src="outputs/balance.mp4" width="380" controls></video></td>
+      <td><video src="outputs/bounce.mp4" width="380" controls></video></td></tr>
+</table>
+
 ## Install
 
 ```bash
