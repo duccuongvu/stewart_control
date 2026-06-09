@@ -39,7 +39,7 @@ Z_PUMP_LIMIT = 0.15      # clip on the pumped reference (m); bounds bounce energ
 
 def main():
     args = parse_args(__doc__, default_duration=24.0)
-    sim, smc, ball = build("scene_bounce.xml", BALL_GAINS)
+    sim, smc, ball = build("bounce", BALL_GAINS)
     z_ref = 0.0
 
     def control(sim, t):

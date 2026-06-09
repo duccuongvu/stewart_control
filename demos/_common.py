@@ -4,15 +4,14 @@ import argparse
 from pathlib import Path
 
 from stewart import StewartModel, StewartSim, SlidingModeController, BallBalancingController
-from stewart import config
+from stewart import config, scene
 
-MODEL_DIR = Path(__file__).resolve().parent.parent / "model"
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "outputs"
 
 
-def build(scene_name, ball_gains):
-    """Return (sim, smc, ball_ctrl) for the given scene file under model/."""
-    sim = StewartSim(MODEL_DIR / scene_name)
+def build(kind, ball_gains):
+    """Return (sim, smc, ball_ctrl) for demo ``kind`` in {"balance", "bounce"}."""
+    sim = StewartSim(scene.build(kind))
     model = StewartModel(config.UPPER_MASS, config.UPPER_INERTIA,
                          config.BASE_ANCHORS, config.TOP_ANCHORS, config.GRAVITY)
     smc = SlidingModeController(model, dt=sim.dt, **config.SMC_GAINS)

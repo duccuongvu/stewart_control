@@ -28,7 +28,7 @@ BALL_GAINS = dict(kp=0.8, ki=0.0, kd=1.1)
 
 def main():
     args = parse_args(__doc__, default_duration=20.0)
-    sim, smc, ball = build("scene_balance.xml", BALL_GAINS)
+    sim, smc, ball = build("balance", BALL_GAINS)
     z_ref = config.HOME_POSE[2]
 
     def control(sim, t):

@@ -14,8 +14,9 @@ from .utils import quat_to_euler
 
 
 class StewartSim:
-    def __init__(self, scene_path, timestep=None):
-        self.model = mj.MjModel.from_xml_path(str(scene_path))
+    def __init__(self, model, timestep=None):
+        # Accept a prebuilt MjModel (see stewart.scene.build) or a scene path.
+        self.model = model if isinstance(model, mj.MjModel) else mj.MjModel.from_xml_path(str(model))
         if timestep is not None:
             self.model.opt.timestep = timestep
         self.data = mj.MjData(self.model)
