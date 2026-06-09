@@ -11,17 +11,35 @@ position error into a tray tilt.
 
 ## Demos
 
+| Ball balancing | Ball bouncing |
+| --- | --- |
+| ▶ [outputs/balance.mp4](outputs/balance.mp4) | ▶ [outputs/bounce.mp4](outputs/bounce.mp4) |
+
 *Balancing*: the ball rolls to a square of targets. *Bouncing*: the ball bounces
 while travelling to the same targets, sustained by a pumped vertical reference.
 
-<video src="outputs/balance.mp4" width="380" controls></video>
-
-<video src="outputs/bounce.mp4" width="380" controls></video>
-
-
+<!-- These tags play in IDEs / local viewers; GitHub shows the links above. -->
+<p align="center">
+  <table>
+    <tr>
+      <td style="padding-right:20px;">
+        <img src="doc/balancing.gif" height="420">
+      </td>
+      <td>
+        <img src="doc/bouncing.gif" height="420">
+      </td>
+    </tr>
+  </table>
+</p>
 ## Install
 
+The MuJoCo platform model is a git **submodule** (`model/stewart_platform_mujoco`,
+from [duccuongvu/stewart_platform_mujoco](https://github.com/duccuongvu/stewart_platform_mujoco))
+and is never modified — the tray, ball and scene are added in memory at load time.
+
 ```bash
+git submodule update --init          # fetch the platform model (or clone with --recurse-submodules)
+
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -64,17 +82,22 @@ upper-platform pose/twist ──▶ SlidingModeController (SMC) ◀───┘
 ## Layout
 
 ```
-model/      MuJoCo model — platform.xml (robot + tray) and scene_{balance,bounce}.xml
-stewart/    python package: model, controllers (smc, ball), sim harness, config
+model/
+  stewart_platform_mujoco/   git submodule: the pristine MuJoCo platform model (never edited)
+  stewart_platform.png       hero render
+stewart/    python package: model, controllers (smc, ball), sim harness, scene builder, config
 demos/      runnable entry points: balance_ball.py, bounce_ball.py
 outputs/    rendered videos
 ```
 
-The platform geometry and the upper-platform mass/inertia used for control
-design are recorded in `stewart/config.py`, taken directly from the MJCF model.
+`stewart/scene.py` loads the submodule model and, via MuJoCo's `MjSpec` API, adds
+the ball tray (a child of the `upper` body), the ball, the ball sensors and the
+visual scene in memory — so the submodule files stay untouched. The platform
+geometry and the upper-platform mass/inertia used for control design are recorded
+in `stewart/config.py`, taken directly from that model.
 
 ## License
 
-MIT (see `model/LICENSE`). Platform model by
+MIT (see `model/stewart_platform_mujoco/LICENSE`). Platform model by
 [Duc Cuong Vu](https://github.com/duccuongvu) and
 [Viet Khanh Nguyen](https://github.com/vietkhanh-nguyen).
