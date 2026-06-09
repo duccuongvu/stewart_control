@@ -20,8 +20,8 @@ while travelling to the same targets, sustained by a pumped vertical reference.
 
 <!-- These tags play in IDEs / local viewers; GitHub shows the links above. -->
 <table>
-  <tr><td><video src="outputs/balance.mp4" width="380" controls></video></td>
-      <td><video src="outputs/bounce.mp4" width="380" controls></video></td></tr>
+  <video src="outputs/balance.mp4" width="380" controls></video>
+  <video src="outputs/bounce.mp4" width="380" controls></video>
 </table>
 
 ## Install
