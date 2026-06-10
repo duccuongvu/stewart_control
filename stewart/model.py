@@ -1,12 +1,8 @@
-"""Analytic rigid-body model of the Stewart platform.
-
-Provides the quantities the sliding-mode controller needs in task space:
-inverse kinematics (leg vectors/lengths), the 6x6 Jacobian d(leg length)/d(pose),
-the task-space mass/inertia matrix of the moving platform, and the gravity wrench.
-
-State convention: ``q = [Px, Py, Pz, roll, pitch, yaw]`` with ZYX Euler angles,
-matching ``utils.quat_to_euler`` ('xyz' extrinsic == 'ZYX' intrinsic here).
-"""
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
 
 import numpy as np
 from scipy.spatial.transform import Rotation as R

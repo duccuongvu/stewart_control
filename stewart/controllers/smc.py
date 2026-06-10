@@ -1,15 +1,8 @@
-"""Sliding-mode controller for the platform pose (inner loop).
-
-Computes the six leg forces that drive the measured platform pose ``q`` to a
-reference ``qr``. Task-space computed-force law:
-
-    s  = (dqr - dq) + c1 (qr - q) + c0 ∫(qr - q)
-    q̈ = M⁻¹ Jᵀ F + M⁻¹(-g)              (platform dynamics)
-    F  = (M⁻¹ Jᵀ)⁻¹ (q̈r - f + c0 e + c1 ė + c2 sat(s) + c3 s)
-
-where ``f = M⁻¹(-g)`` and ``sat`` is ``sign`` (or a ``tanh`` boundary layer to
-reduce chattering when ``boundary_layer > 0``).
-"""
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
 
 import numpy as np
 

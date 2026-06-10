@@ -1,4 +1,8 @@
-"""Stewart-platform ball balancing / bouncing — sliding-mode control in MuJoCo."""
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
 
 from .model import StewartModel
 from .sim import StewartSim

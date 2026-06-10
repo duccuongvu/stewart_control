@@ -1,12 +1,8 @@
-"""Build a runnable MuJoCo model from the pristine platform submodule.
-
-The Stewart platform lives in a git submodule (``model/stewart_platform_mujoco``)
-that we never edit. MuJoCo's ``<include>`` cannot inject a child into an existing
-body and mishandles the submodule's relative ``meshdir``, so instead we load the
-submodule model with the ``MjSpec`` API and add — in memory — the ball tray (a
-real child of the ``upper`` body), the ball, the ball sensors, and the visual
-scene (floor, light, camera, skybox). The submodule files stay untouched.
-"""
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
 
 from pathlib import Path
 

@@ -97,8 +97,11 @@ visual scene in memory — so the submodule files stay untouched. The platform
 geometry and the upper-platform mass/inertia used for control design are recorded
 in `stewart/config.py`, taken directly from that model.
 
-## License
-
-MIT (see `model/stewart_platform_mujoco/LICENSE`). Platform model by
+## Contributor
 [Duc Cuong Vu](https://github.com/duccuongvu) and
 [Viet Khanh Nguyen](https://github.com/vietkhanh-nguyen).
+
+
+## License
+
+MIT.

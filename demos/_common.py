@@ -1,5 +1,8 @@
-"""Shared wiring for the demos: build the model + controllers + simulation."""
-
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
 import argparse
 from pathlib import Path
 

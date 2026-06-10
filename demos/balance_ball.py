@@ -1,3 +1,9 @@
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
+
 """Ball-balancing demo.
 
 The ball rolls on the tray; an outer PID maps its position error to a tilt

@@ -1,9 +1,8 @@
-"""MuJoCo simulation harness for the Stewart platform.
-
-Loads a scene, exposes typed sensor reads and actuator writes, and runs a
-control loop either in a live passive viewer or rendered offscreen to an MP4.
-A ``control_fn(sim, t)`` callback is invoked once per simulation step.
-"""
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
 
 import time
 

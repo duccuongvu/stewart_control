@@ -1,10 +1,8 @@
-"""Physical constants of the Stewart platform, taken from ``model/platform.xml``.
-
-The base/top anchor points are the leg attachment points read directly from the
-MJCF (base: ``cardan1_i`` body positions in the base frame; top: ``site_upper_i``
-positions in the platform frame). The upper-platform mass and inertia come from
-MuJoCo's ``inertiafromgeom`` computation for the ``upper`` body.
-"""
+#
+# Created on Wed Jun 10 2026
+#
+# Copyright (c) 2026 Duc-Cuong Vu - vdcuong2002@gmail.com
+#
 
 import numpy as np
 
